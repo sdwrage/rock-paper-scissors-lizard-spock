@@ -1,0 +1,18 @@
+.App {
+  display:flex;
+  align-items:center;
+  flex-direction: column;
+  width:100vw;
+  height: 100vh;
+}
+
+.App-header {
+  flex:30%;
+  width:100%;
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}

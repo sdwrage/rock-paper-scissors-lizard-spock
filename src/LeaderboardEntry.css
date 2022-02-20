@@ -1,0 +1,13 @@
+.LeaderboardEntry {
+    flex: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1em;
+    margin: 20px;
+    background-image: linear-gradient(45deg, #6303B1, #ff0099);
+    transform: skewY(-3deg);
+  }
+
+  .LeaderboardEntry h2, .LeaderboardEntry p {
+      transform: skewY(3deg);
+  }

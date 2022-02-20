@@ -1,0 +1,12 @@
+.Leaderboard {
+    flex:70%;
+    width:50%;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+  }
+
+.Leaderboard h1 {
+    padding:3em;
+}
+  
