@@ -1,121 +1,142 @@
 [
-    {
-        "id": 1,
-        "username": "Xealgo",
-        "score": 55
-    },
-
-    {
-        "id": 2,
-        "username": "Chibi",
-        "score": 78
-    },
-
-    {
-        "id": 3,
-        "username": "Sdwrage",
-        "score": 42
-    },
-
-    {
-        "id": 4,
-        "username": "LeafyGreen",
-        "score": 23
-    },
-
-    {
-        "id": 5,
-        "username": "MasterZen",
-        "score": 55
-    },
-
-    {
-        "id": 6,
-        "username": "NajaHath",
-        "score": 78
-    },
-
-    {
-        "id": 7,
-        "username": "DragonWake224",
-        "score": 44
-    },
-
-    {
-        "id": 8,
-        "username": "LampGuy202",
-        "score": 77
-    },
-
-    {
-        "id": 9,
-        "username": "ImTheMan05",
-        "score": 26
-    },
-
-    {
-        "id": 10,
-        "username": "GoldenEye007",
-        "score": 33
-    },
-
-    {
-        "id": 11,
-        "username": "ThatOneDude",
-        "score": 63
-    },
-
-    {
-        "id": 12,
-        "username": "ManiacMansion600",
-        "score": 80
-    },
-
-    {
-        "id": 13,
-        "username": "TheMoleMan42",
-        "score": 40
-    },
-
-    {
-        "id": 14,
-        "username": "CthuluBookLover",
-        "score": 79
-    },
-
-    {
-        "id": 15,
-        "username": "RedBaron",
-        "score": 56
-    },
-
-    {
-        "id": 16,
-        "username": "MrMoney",
-        "score": 57
-    },
-
-    {
-        "id": 17,
-        "username": "SlotMaster76",
-        "score": 25
-    },
-
-    {
-        "id": 18,
-        "username": "DunkNGoNuts",
-        "score": 21
-    },
-
-    {
-        "id": 19,
-        "username": "ShadowMcShadow",
-        "score": 57
-    },
-
-    {
-        "id": 20,
-        "username": "TreeHugger55",
-        "score": 20
-    }
+	{
+		"id": 12,
+		"username": "ManiacMansion600",
+		"score": 80,
+		"rank": 1,
+		"tied": false
+	},
+	{
+		"id": 14,
+		"username": "CthuluBookLover",
+		"score": 79,
+		"rank": 2,
+		"tied": false
+	},
+	{
+		"id": 2,
+		"username": "Chibi",
+		"score": 78,
+		"rank": 3,
+		"tied": false
+	},
+	{
+		"id": 6,
+		"username": "NajaHath",
+		"score": 78,
+		"rank": 4,
+		"tied": true
+	},
+	{
+		"id": 8,
+		"username": "LampGuy202",
+		"score": 77,
+		"rank": 5,
+		"tied": false
+	},
+	{
+		"id": 11,
+		"username": "ThatOneDude",
+		"score": 63,
+		"rank": 6,
+		"tied": false
+	},
+	{
+		"id": 16,
+		"username": "MrMoney",
+		"score": 57,
+		"rank": 7,
+		"tied": false
+	},
+	{
+		"id": 19,
+		"username": "ShadowMcShadow",
+		"score": 57,
+		"rank": 8,
+		"tied": false
+	},
+	{
+		"id": 15,
+		"username": "RedBaron",
+		"score": 56,
+		"rank": 9,
+		"tied": false
+	},
+	{
+		"id": 1,
+		"username": "Xealgo",
+		"score": 55,
+		"rank": 10,
+		"tied": false
+	},
+	{
+		"id": 5,
+		"username": "MasterZen",
+		"score": 55,
+		"rank": 11,
+		"tied": false
+	},
+	{
+		"id": 7,
+		"username": "DragonWake224",
+		"score": 44,
+		"rank": 12,
+		"tied": false
+	},
+	{
+		"id": 3,
+		"username": "Sdwrage",
+		"score": 42,
+		"rank": 13,
+		"tied": false
+	},
+	{
+		"id": 13,
+		"username": "TheMoleMan42",
+		"score": 40,
+		"rank": 14,
+		"tied": false
+	},
+	{
+		"id": 10,
+		"username": "GoldenEye007",
+		"score": 33,
+		"rank": 15,
+		"tied": false
+	},
+	{
+		"id": 9,
+		"username": "ImTheMan05",
+		"score": 26,
+		"rank": 16,
+		"tied": false
+	},
+	{
+		"id": 17,
+		"username": "SlotMaster76",
+		"score": 25,
+		"rank": 17,
+		"tied": false
+	},
+	{
+		"id": 4,
+		"username": "LeafyGreen",
+		"score": 23,
+		"rank": 18,
+		"tied": false
+	},
+	{
+		"id": 18,
+		"username": "DunkNGoNuts",
+		"score": 21,
+		"rank": 19,
+		"tied": false
+	},
+	{
+		"id": 20,
+		"username": "TreeHugger55",
+		"score": 20,
+		"rank": 20,
+		"tied": false
+	}
 ]
