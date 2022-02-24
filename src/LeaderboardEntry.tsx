@@ -22,7 +22,7 @@ export const LeaderboardEntry: React.FC<LeaderboardEntryProps> = observer((props
         <article className="LeaderboardEntry">
             <h2>{ props.username }</h2>
             <p> High Score: { props.score }</p>
-            <p>Rank: {ordinal(props.rank)}</p>
+            <p>Rank: { props.tied ? 'T-' : '' } {ordinal(props.rank)}</p>
         </article>
     )
 });

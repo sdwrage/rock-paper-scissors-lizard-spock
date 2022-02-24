@@ -28,19 +28,16 @@ export class LeaderboardEntryStore {
 
     // This is a simulated score to move the challenger scores either up or down randomly
     public calculateChallengerScore = (challenger : IChallenger) => {
-        let handicap : number = -3;
+
         let sortedChallengers = challengers.sort((a, b) => { return a.score - b.score});
-        let last10Challengers = sortedChallengers.slice(0,10);
+        sortedChallengers.forEach((challenger) => {
+            let handicap = challenger.rank / challengers.length;
+            let simulatedWin = ((Math.floor((Math.random() * 10) + 1) + handicap) > 5) ? 1 : -1;
 
-        if (last10Challengers.filter(challengers => challengers.id == challenger.id)) {
-            handicap = 3;
-        }
-
-        let simulatedWin = ((Math.floor((Math.random() * 10) + 1) + handicap) > 5) ? 1 : -1;
-
-        challenger.score += simulatedWin;
-
-        this.updateChallenger(challenger);
+            challenger.score += simulatedWin;
+            this.updateChallenger(challenger);
+            return challenger;
+        });    
     };
 
     public calculateAllScores() {
