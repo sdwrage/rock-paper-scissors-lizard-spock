@@ -1,7 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Leaderboard from './Leaderboard'
+import {Leaderboard} from './Leaderboard'
 
 function App() {
   return (

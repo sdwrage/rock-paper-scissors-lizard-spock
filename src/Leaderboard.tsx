@@ -1,30 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import './Leaderboard.css'
-import LeaderboardEntry from './LeaderboardEntry';
-import { LeaderboardEntryStore } from "./stores/LeaderboardEntryStore";
-import { useStores } from "./use-stores";
+import React from 'react';
+import './Leaderboard.css';
+import { LeaderboardEntry } from './LeaderboardEntry';
+import { store } from "./stores";
+import { observer } from "mobx-react";
+import { IChallenger } from './stores/LeaderboardEntryStore';
 
-let leaderboardEntryStore = new LeaderboardEntryStore();
-leaderboardEntryStore.calculateAllScores();
-//const { leaderboardEntryStore } = useStores();
+export const Leaderboard: React.FC<{}> = observer((props) => {
+    const challengers = store.challengers.slice();
+    challengers.sort((a: IChallenger,b: IChallenger) => {
+        return a.rank - b.rank;
+    });
 
-class Leaderboard extends React.Component {
-    render () {
-        return (
-            <section className="Leaderboard">
-                    <h1> Let's get ready to rumble!!</h1>
+    return (
+        <section className="Leaderboard">
+                <h1> Let's get ready to rumble!!</h1>
 
-                    {leaderboardEntryStore.challengers
-                        .sort((a, b) => {
-                            return b.score - a.score;
-                        })
-                        .map(challenger => (
-                            <LeaderboardEntry username={challenger.username} score={challenger.score} rank={challenger.rank} tied={challenger.tied} />
-                        ))
-                    }
-            </section>
-        )
-    }
-}
-
-export default Leaderboard;
+                {challengers
+                    .map(challenger => (
+                        <LeaderboardEntry username={challenger.username} score={challenger.score} rank={challenger.rank} tied={challenger.tied} />
+                    ))
+                }
+        </section>
+    )
+});

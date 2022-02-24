@@ -13,10 +13,9 @@ export class LeaderboardEntryStore {
     public challengers: IChallenger[] = challengers; 
 
     constructor() {
-        // This is all you need to make the store use mobx
-        // and trigger updates automatically
         makeAutoObservable(this);
     }
+
     public updateChallenger = (updatedChallenger: IChallenger) => {
         const updatedChallengers = this.challengers.map(challenger => {
             if (challenger.id === updatedChallenger.id) {
@@ -49,26 +48,13 @@ export class LeaderboardEntryStore {
             this.calculateChallengerScore(challenger);
         });
 
-        // Set ranks and Ties
+         challengers.sort((a, b) => {
+            return b.score - a.score;
+        });
 
-        // let orderedChallengers : any = challengers.sort((a, b) => { return b.score - a.score});
-
-        // for (let i = 0; orderedChallengers.length; i++) {
-        //     // Lets add the rank first
-        //     orderedChallengers[i].rank = i + 1;
-
-        //     // Check score for ties
-        //     orderedChallengers[i].tied = false;
-
-        //     if (orderedChallengers[i].score == orderedChallengers[i+1].score) {
-        //         orderedChallengers[i].tied = true;
-        //     }
-
-        //     if (i != 0 && (orderedChallengers[i].score == orderedChallengers[i-1].score)) {
-        //         orderedChallengers[i].tied = true;
-        //     }
-        // }
-
-        // this.challengers = orderedChallengers;
+        challengers.forEach((challenger, index) => {
+            challenger.rank = index + 1;
+            this.updateChallenger(challenger);
+        });
     }
 }
